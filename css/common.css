@@ -160,3 +160,19 @@ body {
   display: flex;
   align-items: center;
 }
+
+
+/*------------------------Uncomment for form 5---------------------------*/
+
+      .facebook-btn {
+        background-color: #1877f2; /* Update the Facebook button background color */
+        color: #fff;
+      }
+
+      .google-btn {
+        background-color: #ea4335; /* Update the Google button background color */
+        color: #fff;
+      }
+      .forgot-password a:hover {
+        color: #28a745; /* Update the forgot password link hover color */
+      }
