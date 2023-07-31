@@ -4,3 +4,4 @@ pub mod login_form_three;
 pub mod login_form_four;
 pub mod login_form_five;
 pub mod login_form_six;
+pub mod login_form_seven;
