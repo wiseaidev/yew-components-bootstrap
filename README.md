@@ -45,6 +45,7 @@ This subsection lists components implemented using the [Bootstrap CSS](https://g
 | --- | --- | --- |
 | 1   | ![Component 1](./assets/form-one.png) | [Localhost](http://localhost:3000/bootstrap-css/1) |
 | 1   | ![Component 2](./assets/form-two.png) | [Localhost](http://localhost:3000/bootstrap-css/2) |
+| 1   | ![Component 2](./assets/form-three.png) | [Localhost](http://localhost:3000/bootstrap-css/3) |
 
 ## 🤝 Contributing
 
