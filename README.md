@@ -1,15 +1,15 @@
-# 📚 Yew Tailwind Components
+# 📚 Yew Bootstrap Components
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/wiseaidev)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![made-with-rust](https://img.shields.io/badge/Made%20with-Rust-1f425f.svg?logo=rust&logoColor=white)](https://www.rust-lang.org/)
-[![Share On Reddit](https://img.shields.io/badge/share%20on-reddit-red?style=flat-square&logo=reddit)](https://reddit.com/submit?url=https://github.com/wiseaidev/yew-components-bootstrap&title=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Tailwind.)
-[![Share On Ycombinator](https://img.shields.io/badge/share%20on-hacker%20news-orange?style=flat-square&logo=ycombinator)](https://news.ycombinator.com/submitlink?u=https://github.com/wiseaidev/yew-components-bootstrap&t=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Tailwind.)
-[![Share On Twitter](https://img.shields.io/badge/share%20on-twitter-03A9F4?style=flat-square&logo=twitter)](https://twitter.com/share?url=https://github.com/wiseaidev/yew-components-bootstrap&text=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Tailwind.)
+[![Share On Reddit](https://img.shields.io/badge/share%20on-reddit-red?style=flat-square&logo=reddit)](https://reddit.com/submit?url=https://github.com/wiseaidev/yew-components-bootstrap&title=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Bootstrap.)
+[![Share On Ycombinator](https://img.shields.io/badge/share%20on-hacker%20news-orange?style=flat-square&logo=ycombinator)](https://news.ycombinator.com/submitlink?u=https://github.com/wiseaidev/yew-components-bootstrap&t=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Bootstrap.)
+[![Share On Twitter](https://img.shields.io/badge/share%20on-twitter-03A9F4?style=flat-square&logo=twitter)](https://twitter.com/share?url=https://github.com/wiseaidev/yew-components-bootstrap&text=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Bootstrap.)
 [![Share On Facebook](https://img.shields.io/badge/share%20on-facebook-1976D2?style=flat-square&logo=facebook)](https://www.facebook.com/sharer/sharer.php?u=https://github.com/wiseaidev/yew-components-bootstrap)
-[![Share On Linkedin](https://img.shields.io/badge/share%20on-linkedin-3949AB?style=flat-square&logo=linkedin)](https://www.linkedin.com/shareArticle?url=https://github.com/wiseaidev/yew-components-bootstrap&title=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Tailwind.)
+[![Share On Linkedin](https://img.shields.io/badge/share%20on-linkedin-3949AB?style=flat-square&logo=linkedin)](https://www.linkedin.com/shareArticle?url=https://github.com/wiseaidev/yew-components-bootstrap&title=A%20Collection%20of%20Reusable%20Yew%20Framework%20Components%20-%20Bootstrap.)
 
-This repository contains a collection of reusable components written in Rust for the Yew framework. The components cover a range of functionalities, from login and register forms to contact us, forget password forms, etc. Each component is implemented using the Tailwind CSS framework.
+This repository contains a collection of reusable components written in Rust for the Yew framework. The components cover a range of functionalities, from login and register forms to contact us, forget password forms, etc. Each component is implemented using the Bootstrap CSS framework.
 
 ## 📖 Prologue
 
@@ -37,7 +37,7 @@ This repository contains a collection of reusable components written in Rust for
 
 Navigate to http://localhost:3000 to explore all available components.
 
-## 🌀 Tailwind CSS Components
+## 🌀 Bootstrap CSS Components
 
 This subsection lists components implemented using the [Bootstrap CSS](https://getbootstrap.com/) framework. Bootstrap is a popular front-end framework that provides a rich set of components and styles, allowing developers to build responsive and visually appealing web applications.
 
@@ -55,6 +55,6 @@ This project and the accompanying materials are made available under the terms a
 
 ## 📝 Epilogue
 
-In conclusion, this repository is a treasure trove of reusable components crafted in Rust for the Yew framework, offering a plethora of functionalities ranging from user authentication to contact forms and more. Each component showcases the capabilities of the CSS Tailwind CSS framework. Whether you're a Rust enthusiast or a front-end developer seeking powerful and flexible components, this collection has something to offer.
+In conclusion, this repository is a treasure trove of reusable components crafted in Rust for the Yew framework, offering a plethora of functionalities ranging from user authentication to contact forms and more. Each component showcases the capabilities of the CSS Bootstrap CSS framework. Whether you're a Rust enthusiast or a front-end developer seeking powerful and flexible components, this collection has something to offer.
 
 Happy coding! 🚀
