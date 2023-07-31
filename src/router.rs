@@ -7,6 +7,7 @@ use crate::pages::login_page_two::LoginPageTwo;
 use crate::pages::login_page_three::LoginPageThree;
 use crate::pages::login_page_four::LoginPageFour;
 use crate::pages::login_page_five::LoginPageFive;
+use crate::pages::login_page_six::LoginPageSix;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
@@ -22,6 +23,8 @@ pub enum Route {
     LoginPageFour,
     #[at("/bootstrap-css/5")]
     LoginPageFive,
+    #[at("/bootstrap-css/6")]
+    LoginPageSix,
 }
 
 pub fn switch(routes: Route) -> Html {
@@ -31,6 +34,7 @@ pub fn switch(routes: Route) -> Html {
         Route::LoginPageThree => html! { <LoginPageThree /> },
         Route::LoginPageFour => html! { <LoginPageFour /> },
         Route::LoginPageFive => html! { <LoginPageFive /> },
+        Route::LoginPageSix => html! { <LoginPageSix /> },
         Route::Error => html! { <Error /> },
     }
 }

@@ -147,7 +147,7 @@ body {
 
 /*------------------------Uncomment for form 4---------------------------*/
 
-body {
+/*body {
   height: 200px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -159,20 +159,27 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-}
+}*/
 
 
 /*------------------------Uncomment for form 5---------------------------*/
-
+/*
       .facebook-btn {
-        background-color: #1877f2; /* Update the Facebook button background color */
+        background-color: #1877f2;
         color: #fff;
       }
 
       .google-btn {
-        background-color: #ea4335; /* Update the Google button background color */
+        background-color: #ea4335;
         color: #fff;
       }
       .forgot-password a:hover {
-        color: #28a745; /* Update the forgot password link hover color */
+        color: #28a745;
+      }
+*/
+
+/*------------------------Uncomment for form 6---------------------------*/
+      body {
+        font-family: "Roboto", sans-serif;
+        background: linear-gradient(135deg, #ee82ee, #8a2be2);
       }
