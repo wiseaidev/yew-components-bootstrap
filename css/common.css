@@ -338,124 +338,128 @@ button:hover {
 
 */
 
-
 /*------------------------Uncomment for form 8---------------------------*/
-    body {
-      font-family: "Roboto", Arial, sans-serif;
-      font-size: 14px;
-      line-height: 1.8;
-      font-weight: normal;
-      background: linear-gradient(135deg, #bf4080, #ed6495, #ffa094, #ffc3a0, #ffd1b3);
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      height: 100vh;
-      margin: 0;
-      align-items: center;
-      justify-content: center;
-    }
-    a {
-      transition: .3s all ease;
-      color: #ff8091;
-    }
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: normal;
+  background: linear-gradient(
+    135deg,
+    #bf4080,
+    #ed6495,
+    #ffa094,
+    #ffc3a0,
+    #ffd1b3
+  );
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  transition: 0.3s all ease;
+  color: #ff8091;
+}
 
-    a:hover,
-    a:focus {
-      text-decoration: none !important;
-      outline: none !important;
-      box-shadow: none;
-      color: #fff;
-    }
+a:hover,
+a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none;
+  color: #fff;
+}
 
-    .heading-section {
-      font-size: 32px;
-      color: #fff;
-      margin-bottom: 20px;
-    }
+.heading-section {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+}
 
-    .img {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 
+.btn {
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: none !important;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
 
+.btn:hover,
+.btn:active,
+.btn:focus {
+  outline: none;
+}
 
-    .btn {
-      cursor: pointer;
-      border-radius: 40px;
-      box-shadow: none !important;
-      font-size: 16px;
-      transition: background-color 0.3s;
-      margin-top: 15px;
-    }
+.btn.btn-primary {
+  background: #ff8091 !important;
+  border: 1px solid #ff8091 !important;
+  color: #fff !important;
+}
 
-    .btn:hover,
-    .btn:active,
-    .btn:focus {
-      outline: none;
-    }
+.btn.btn-primary:hover {
+  border: 1px solid #ff8091;
+  background: transparent;
+  color: #ff8091;
+}
 
-    .btn.btn-primary {
-      background: #ff8091 !important;
-      border: 1px solid #ff8091 !important;
-      color: #fff !important;
-    }
+.btn.btn-primary.btn-outline-primary {
+  border: 1px solid #ff8091;
+  background: transparent;
+  color: #ff8091;
+}
 
-    .btn.btn-primary:hover {
-      border: 1px solid #ff8091;
-      background: transparent;
-      color: #ff8091;
-    }
+.btn.btn-primary.btn-outline-primary:hover {
+  border: 1px solid transparent;
+  background: #ff8091;
+  color: #fff;
+}
 
-    .btn.btn-primary.btn-outline-primary {
-      border: 1px solid #ff8091;
-      background: transparent;
-      color: #ff8091;
-    }
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-    .btn.btn-primary.btn-outline-primary:hover {
-      border: 1px solid transparent;
-      background: #ff8091;
-      color: #fff;
-    }
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 24px;
+  transition: background-color 0.3s;
+}
 
-    .social-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+.social-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-    .social-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      margin: 0 5px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.4);
-      color: #fff;
-      font-size: 24px;
-      transition: background-color 0.3s;
-    }
+.facebook-icon {
+  background-color: #3b5998;
+}
 
-    .social-button:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
+.linkedin-icon {
+  background-color: #0077b5;
+}
 
-    .facebook-icon {
-      background-color: #3b5998;
-    }
+.twitter-icon {
+  background-color: #1da1f2;
+}
 
-    .linkedin-icon {
-      background-color: #0077b5;
-    }
-
-    .twitter-icon {
-      background-color: #1da1f2;
-    }
-
-    .instagram-icon {
-      background-color: #e1306c;
-    }
+.instagram-icon {
+  background-color: #e1306c;
+}
