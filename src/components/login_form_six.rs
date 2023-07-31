@@ -88,7 +88,7 @@ pub fn login_form_six() -> Html {
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-7">
                   <h2 class="heading-secondary mb-4">
-                    {"Login to"} <strong>{"Login"}</strong>
+                    <strong>{"Login"}</strong>
                   </h2>
                   if !error.is_empty() {
                     <div class="error">{error}</div>

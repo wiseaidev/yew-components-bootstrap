@@ -49,6 +49,7 @@ This section lists components implemented using the [Bootstrap CSS](https://getb
 | 4 | ![Component 4](./assets/form-four.png) | [Localhost](http://localhost:3000/bootstrap-css/4) |
 | 5 | ![Component 5](./assets/form-five.png) | [Localhost](http://localhost:3000/bootstrap-css/5) |
 | 6 | ![Component 6](./assets/form-six.png) | [Localhost](http://localhost:3000/bootstrap-css/6) |
+| 7 | ![Component 7](./assets/form-seven.png) | [Localhost](http://localhost:3000/bootstrap-css/7) |
 
 ## 🤝 Contributing
 

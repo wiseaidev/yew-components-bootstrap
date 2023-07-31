@@ -1,0 +1,229 @@
+.paragraph {
+  color: #999;
+  font-weight: 300;
+}
+
+.heading {
+  font-family: "Roboto", sans-serif;
+}
+
+.link {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.link:hover {
+  text-decoration: none !important;
+}
+
+.content {
+  padding: 7rem 0;
+}
+
+.heading-secondary {
+  font-size: 20px;
+}
+
+.container-half,
+.container-half .container > .row {
+  height: 100vh;
+  min-height: 700px;
+}
+
+@media (max-width: 991.98px) {
+  .container-half .bg-img {
+    height: 200px;
+  }
+}
+
+.container-half .contents {
+  background: #fff;
+}
+
+.container-half .contents,
+.container-half .bg-img {
+  width: 50%;
+}
+
+@media (max-width: 1199.98px) {
+  .container-half .contents,
+  .container-half .bg-img {
+    width: 100%;
+  }
+}
+
+.container-half .contents .form-control,
+.container-half .bg-img .form-control {
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 54px;
+  background: #f8f9fa;
+  padding-left: 40px;
+}
+
+.container-half .contents .form-control:active,
+.container-half .contents .form-control:focus,
+.container-half .bg-img .form-control:active,
+.container-half .bg-img .form-control:focus {
+  outline: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container-half .bg-img {
+  background-size: cover;
+  background-position: center;
+}
+
+.link-primary {
+  color: #555;
+  text-decoration: none;
+}
+
+.btn-primary {
+  height: 54px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  border: 1px solid #7b76ff;
+  background-color: #7b76ff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #5a36ff;
+}
+
+.forgot-pass {
+  position: relative;
+  top: 2px;
+  right: 0px;
+  font-size: 14px;
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.control .caption {
+  position: relative;
+  top: 0.2rem;
+  color: #555;
+}
+
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+
+.control input:checked ~ .control__indicator {
+  background: #fb771a;
+}
+
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #fb8633;
+}
+
+.control input:disabled ~ .control__indicator {
+  background: #e0e0e0;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.control__indicator:after {
+  font-family: "bootstrap-icons";
+  content: "\f058"; /* Change the icon as per your preference */
+  position: absolute;
+  display: none;
+  font-size: 16px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  color: #555;
+  left: 12px;
+  top: 16px;
+}
+
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.control--checkbox .control__indicator:after {
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+
+.control--checkbox input:disabled:checked ~ .control__indicator {
+  background-color: #7e0cf5;
+  opacity: 0.2;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-buttons a {
+  display: inline-block;
+  margin: 0 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  background-color: #555;
+}
+
+.social-buttons a:hover {
+  background-color: #666;
+}
+
+.social-buttons .bi-linkedin {
+  background-color: #0077b5;
+}
+
+.social-buttons .bi-facebook {
+  background-color: #3b5998;
+}
+
+.social-buttons .bi-twitter {
+  background-color: #1da1f2;
+}
