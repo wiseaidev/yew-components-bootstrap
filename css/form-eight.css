@@ -1,0 +1,81 @@
+    .login-wrap {
+      position: relative;
+      background: #4b005f;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+      margin-top: 30px;
+    }
+
+    .login-wrap h3 {
+      font-weight: 400;
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .login-wrap p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 30px;
+    }
+
+    .login-wrap .img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .login-wrap .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .login-wrap .form-group .icon {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      font-size: 24px;
+    }
+
+    .login-wrap .form-group .icon span {
+      color: #fff;
+    }
+
+    .login-wrap .form-control {
+      height: 48px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #eee !important;
+      font-size: 16px;
+      box-shadow: none;
+      border-radius: 30px;
+      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding-left: 50px;
+      padding-right: 20px;
+      letter-spacing: 1px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .login-wrap .form-control:focus,
+    .login-wrap .form-control:active {
+      outline: none !important;
+      box-shadow: none;
+      background: rgba(0, 0, 0, 0.4);
+      border-color: #ff8091;
+    }
+    .login-wrap .form-group .icon {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      font-size: 24px;
+    }
+    .profile-picture {
+
+     background-image: url(https://images.unsplash.com/photo-1690498705508-13f739ebb14b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80);
+    }
