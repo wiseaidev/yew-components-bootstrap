@@ -1,12 +1,14 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #007bff, #e52e71);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+/*------------------------common css---------------------------*/
+.error {
+  background-color: #ff4136;
+  color: #fff;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
-
 .dark-mode-toggle {
   position: absolute;
   top: 20px;
@@ -21,68 +23,6 @@ body {
 
 .dark-mode-toggle:hover {
   color: #f8f9fa;
-}
-
-.login-container-one {
-  max-width: 1200px;
-  width: 400px;
-  margin: auto;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid #007bff;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  position: relative;
-}
-
-.login-container-one h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #007bff;
-}
-
-.login-container-one label {
-  color: #333;
-  font-weight: 600;
-}
-
-.login-container-one .form-control {
-  border-color: #007bff;
-  border-radius: 8px;
-  box-shadow: none;
-}
-
-.login-container-one .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.login-container-one .btn-primary {
-  background-color: #007bff;
-  border: none;
-  border-radius: 8px;
-  padding: 5px 10px;
-  font-size: 16px;
-  font-weight: 600;
-  width: 100%;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-
-.login-container-one .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.login-container-one .btn-primary:active {
-  background-color: #003d80;
-}
-
-.login-container-one .btn-primary .bi {
-  font-size: 20px;
-  margin-right: 5px;
 }
 
 .social-buttons {
@@ -175,13 +115,48 @@ body {
   color: #007bff;
 }
 
-.error {
-  background-color: #ff4136;
-  color: #fff;
-  padding: 12px;
-  font-weight: 700;
-  border-radius: 5px;
-  text-align: center;
+/*------------------------Uncomment for form 1---------------------------*/
+/*
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #007bff, #e52e71);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+*/
+
+/*------------------------Uncomment for form 2 or 3---------------------------*/
+/*
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #008080, #800080);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+*/
+
+/*------------------------Uncomment for form 4---------------------------*/
+
+body {
+  height: 200px;
+  border-radius: 8px;
   margin-bottom: 20px;
-  font-size: 16px;
+  background-image: url("https://images.unsplash.com/photo-1605496036006-fa36378ca4ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }

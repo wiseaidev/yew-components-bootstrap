@@ -11,8 +11,8 @@ struct LoginUserSchema {
     password: String,
 }
 
-#[function_component(LoginFormThree)]
-pub fn login_form_three() -> Html {
+#[function_component(LoginFormFour)]
+pub fn login_form_four() -> Html {
     let error_handle = use_state(String::default);
     let error = (*error_handle).clone();
 
@@ -85,9 +85,8 @@ pub fn login_form_three() -> Html {
           >
             <i class="bi bi-sun-fill"></i>
           </button>
-          <div class="login-container-three">
+          <div class="login-container-four">
             <div class="row">
-              <div class="image-placeholder"></div>
               <div class="form-container">
                 <h2>{"Welcome Back!"}</h2>
                 <form onsubmit={onsubmit}>

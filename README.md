@@ -39,13 +39,14 @@ Navigate to http://localhost:3000 to explore all available components.
 
 ## 🌀 Bootstrap CSS Components
 
-This subsection lists components implemented using the [Bootstrap CSS](https://getbootstrap.com/) framework. Bootstrap is a popular front-end framework that provides a rich set of components and styles, allowing developers to build responsive and visually appealing web applications.
+This section lists components implemented using the [Bootstrap CSS](https://getbootstrap.com/) framework. Bootstrap is a popular front-end framework that provides a rich set of components and styles, allowing developers to build responsive and visually appealing web applications.
 
 | ID  | Preview | Localhost |
 | --- | --- | --- |
 | 1   | ![Component 1](./assets/form-one.png) | [Localhost](http://localhost:3000/bootstrap-css/1) |
-| 1   | ![Component 2](./assets/form-two.png) | [Localhost](http://localhost:3000/bootstrap-css/2) |
-| 1   | ![Component 2](./assets/form-three.png) | [Localhost](http://localhost:3000/bootstrap-css/3) |
+| 2   | ![Component 2](./assets/form-two.png) | [Localhost](http://localhost:3000/bootstrap-css/2) |
+| 3   | ![Component 3](./assets/form-three.png) | [Localhost](http://localhost:3000/bootstrap-css/3) |
+| 4   | ![Component 4](./assets/form-four.png) | [Localhost](http://localhost:3000/bootstrap-css/4) |
 
 ## 🤝 Contributing
 

@@ -121,6 +121,7 @@ pub fn login_form_two() -> Html {
                     class="form-control"
                     id="password"
                     name="password"
+                    placeholder="Password"
                     aria-required="true"
                     ref={input_password_ref}
                     oninput={on_password_change}
