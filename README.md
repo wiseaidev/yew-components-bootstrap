@@ -37,24 +37,24 @@ This repository contains a collection of reusable components written in Rust for
 
 Navigate to http://localhost:3000 to explore all available components.
 
-## 🌀 Bootstrap CSS Components
+## 📙 Bootstrap CSS Components
 
 This section lists components implemented using the [Bootstrap CSS](https://getbootstrap.com/) framework. Bootstrap is a popular front-end framework that provides a rich set of components and styles, allowing developers to build responsive and visually appealing web applications.
 
-| ID  | Preview | Localhost |
-| --- | --- | --- |
-| 1 | ![Component 1](./assets/form-one.png) | [Localhost](http://localhost:3000/bootstrap-css/1) |
-| 2 | ![Component 2](./assets/form-two.png) | [Localhost](http://localhost:3000/bootstrap-css/2) |
-| 3 | ![Component 3](./assets/form-three.png) | [Localhost](http://localhost:3000/bootstrap-css/3) |
-| 4 | ![Component 4](./assets/form-four.png) | [Localhost](http://localhost:3000/bootstrap-css/4) |
-| 5 | ![Component 5](./assets/form-five.png) | [Localhost](http://localhost:3000/bootstrap-css/5) |
-| 6 | ![Component 6](./assets/form-six.png) | [Localhost](http://localhost:3000/bootstrap-css/6) |
-| 7 | ![Component 7](./assets/form-seven.png) | [Localhost](http://localhost:3000/bootstrap-css/7) |
-| 8 | ![Component 8](./assets/form-eight.png) | [Localhost](http://localhost:3000/bootstrap-css/8) |
+| ID  | Preview | Demo | Localhost |
+| --- | --- | --- | --- |
+| 1 | ![Component 1](./assets/form-one.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-1.netlify.app/) | [Localhost](http://localhost:3000/1) |
+| 2 | ![Component 2](./assets/form-two.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-2.netlify.app/) | [Localhost](http://localhost:3000/2) |
+| 3 | ![Component 3](./assets/form-three.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-3.netlify.app/) | [Localhost](http://localhost:3000/3) |
+| 4 | ![Component 4](./assets/form-four.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-4.netlify.app/) | [Localhost](http://localhost:3000/4) |
+| 5 | ![Component 5](./assets/form-five.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-5.netlify.app/) | [Localhost](http://localhost:3000/5) |
+| 6 | ![Component 6](./assets/form-six.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-6.netlify.app/) | [Localhost](http://localhost:3000/6) |
+| 7 | ![Component 7](./assets/form-seven.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-7.netlify.app/) | [Localhost](http://localhost:3000/7) |
+| 8 | ![Component 8](./assets/form-eight.png) | [![Netlify Status](https://api.netlify.com/api/v1/badges/68d1469e-05ee-4acd-9368-b67d9e53bc2e/deploy-status)](https://bootstrap-login-form-8.netlify.app/) | [Localhost](http://localhost:3000/8) |
 
 ## 🤝 Contributing
 
-We welcome contributions to enhance the Rust Data Analysis repository! To contribute, please follow the [`CONTRIBUING.md`](CONTRIBUING.md) file guidelines. Thank you for helping make this project better!
+We welcome contributions to enhance the Yew Bootstrap Components repository! To contribute, please follow the [`CONTRIBUTING.md`](CONTRIBUTING.md) file guidelines. Thank you for helping make this project better!
 
 ## 📜 License
 

@@ -8,8 +8,6 @@
 }
 
 .link {
-  -webkit-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 
@@ -157,20 +155,6 @@
   pointer-events: none;
 }
 
-.control__indicator:after {
-  font-family: "bootstrap-icons";
-  content: "\f058"; /* Change the icon as per your preference */
-  position: absolute;
-  display: none;
-  font-size: 16px;
-  -webkit-transition: 0.3s all ease;
-  -o-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-  color: #555;
-  left: 12px;
-  top: 16px;
-}
-
 .control input:checked ~ .control__indicator:after {
   display: block;
 }
@@ -179,8 +163,6 @@
   top: 50%;
   left: 50%;
   margin-top: -1px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -191,39 +173,4 @@
 .control--checkbox input:disabled:checked ~ .control__indicator {
   background-color: #7e0cf5;
   opacity: 0.2;
-}
-
-.social-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.social-buttons a {
-  display: inline-block;
-  margin: 0 5px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 18px;
-  background-color: #555;
-}
-
-.social-buttons a:hover {
-  background-color: #666;
-}
-
-.social-buttons .bi-linkedin {
-  background-color: #0077b5;
-}
-
-.social-buttons .bi-facebook {
-  background-color: #3b5998;
-}
-
-.social-buttons .bi-twitter {
-  background-color: #1da1f2;
 }

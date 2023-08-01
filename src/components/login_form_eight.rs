@@ -2,6 +2,7 @@ use serde::{ Deserialize, Serialize };
 use wasm_bindgen_futures::spawn_local;
 use web_sys::{ console, HtmlInputElement, Window };
 use yew::prelude::*;
+use regex::Regex;
 
 use crate::api::auth::login_user;
 
@@ -16,6 +17,12 @@ pub fn login_form_eight() -> Html {
     let error_handle = use_state(String::default);
     let error = (*error_handle).clone();
 
+    let email_valid_handle = use_state(|| true);
+    let email_valid = (*email_valid_handle).clone();
+
+    let password_valid_handle = use_state(|| true);
+    let password_valid = (*password_valid_handle).clone();
+
     let input_email_ref = use_node_ref();
     let input_email_handle = use_state(String::default);
     let input_email = (*input_email_handle).clone();
@@ -23,6 +30,13 @@ pub fn login_form_eight() -> Html {
     let input_password_ref = use_node_ref();
     let input_password_handle = use_state(String::default);
     let input_password = (*input_password_handle).clone();
+
+    let validate_email = |email: &str| {
+        let pattern = Regex::new(r"^[^ ]+@[^ ]+\.[a-z]{2,3}$").unwrap();
+        pattern.is_match(email)
+    };
+
+    let validate_password = |password: &str| !password.is_empty();
 
     let on_email_change = {
         let input_email_ref = input_email_ref.clone();
@@ -33,6 +47,7 @@ pub fn login_form_eight() -> Html {
             if let Some(input) = input {
                 let value = input.value();
                 input_email_handle.set(value);
+                email_valid_handle.set(validate_email(&input.value()));
             }
         })
     };
@@ -46,6 +61,7 @@ pub fn login_form_eight() -> Html {
             if let Some(input) = input {
                 let value = input.value();
                 input_password_handle.set(value);
+                password_valid_handle.set(validate_password(&input.value()));
             }
         })
     };
@@ -62,17 +78,22 @@ pub fn login_form_eight() -> Html {
             let email_val = email_ref.clone();
             let password_val = password_ref.clone();
             let error_handle = error_handle.clone();
-            let response = login_user(email_val, password_val).await;
-            match response {
-                Ok(_) => {
-                    console::log_1(&"success".into());
-                    let window: Window = web_sys::window().expect("window not available");
-                    let location = window.location();
-                    let _ = location.set_href("/error");
-                }
-                Err(err) => {
-                    error_handle.set(err);
-                }
+            if email_valid && password_valid {
+              let response = login_user(email_val, password_val).await;
+              match response {
+                  Ok(_) => {
+                      console::log_1(&"success".into());
+                      let window: Window = web_sys::window().expect("window not available");
+                      let location = window.location();
+                      let _ = location.set_href("/error");
+                  }
+                  Err(err) => {
+                      error_handle.set(err);
+                  }
+              }
+            }
+            else {
+              error_handle.set("Please provide a valid email and password!".into());
             }
         });
     });
@@ -80,11 +101,6 @@ pub fn login_form_eight() -> Html {
     html! {
         <section class="ftco-section">
           <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-6 text-center mb-5">
-                <h2 class="heading-section">{"Login Page"}</h2>
-              </div>
-            </div>
             <div class="row justify-content-center">
               <div class="col-md-6 col-lg-4">
                 <div class="login-wrap py-5">
@@ -96,7 +112,7 @@ pub fn login_form_eight() -> Html {
                   <p class="text-center">
                     {"Fill in your credentials below to log in!"}
                   </p>
-                  <form action="#" class="login-form" autocomplete="off" onsubmit={onsubmit}>
+                  <form class="login-form" autocomplete="off" onsubmit={onsubmit}>
                     if !error.is_empty() {
                       <div class="error">{error}</div>
                     }
@@ -111,11 +127,15 @@ pub fn login_form_eight() -> Html {
                         class="form-control"
                         placeholder="Email"
                         ref={input_email_ref}
+                        required={true}
                         oninput={on_email_change}
                         aria-required="true"
                         aria-label="Username"
                       />
                     </div>
+                    if !email_valid {
+                       <div class="error-txt">{"Enter a valid email address"}</div>
+                    }
                     <div class="form-group">
                       <div
                         class="icon d-flex align-items-center justify-content-center"
@@ -127,11 +147,15 @@ pub fn login_form_eight() -> Html {
                         class="form-control"
                         placeholder="Password"
                         aria-required="true"
+                        required={true}
                         ref={input_password_ref}
                         oninput={on_password_change}
                         aria-label="Password"
                       />
                     </div>
+                    if !password_valid {
+                       <div class="error-txt">{"Password can't be blank"}</div>
+                    }
                     <div class="form-group d-md-flex">
                       <div class="w-100 text-md-right">
                         <a href="#" aria-label="Forgot Password">{"Forgot Password"}</a>
