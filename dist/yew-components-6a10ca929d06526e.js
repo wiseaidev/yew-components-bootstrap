@@ -306,10 +306,6 @@ function __wbg_get_imports() {
     imports.wbg.__wbindgen_object_drop_ref = function(arg0) {
         takeObject(arg0);
     };
-    imports.wbg.__wbindgen_string_new = function(arg0, arg1) {
-        const ret = getStringFromWasm0(arg0, arg1);
-        return addHeapObject(ret);
-    };
     imports.wbg.__wbindgen_cb_drop = function(arg0) {
         const obj = takeObject(arg0).original;
         if (obj.cnt-- == 1) {
@@ -318,6 +314,10 @@ function __wbg_get_imports() {
         }
         const ret = false;
         return ret;
+    };
+    imports.wbg.__wbindgen_string_new = function(arg0, arg1) {
+        const ret = getStringFromWasm0(arg0, arg1);
+        return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_json_serialize = function(arg0, arg1) {
         const obj = getObject(arg1);
@@ -851,16 +851,16 @@ function __wbg_get_imports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper962 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 543, __wbg_adapter_36);
+    imports.wbg.__wbindgen_closure_wrapper2243 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 1128, __wbg_adapter_36);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper1327 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 663, __wbg_adapter_39);
+    imports.wbg.__wbindgen_closure_wrapper2651 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 1276, __wbg_adapter_39);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper1437 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 711, __wbg_adapter_42);
+    imports.wbg.__wbindgen_closure_wrapper2761 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 1324, __wbg_adapter_42);
         return addHeapObject(ret);
     };
 
@@ -903,7 +903,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('yew-components-d836bbfd8fe228f0_bg.wasm', import.meta.url);
+        input = new URL('yew-components-6a10ca929d06526e_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

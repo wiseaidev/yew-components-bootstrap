@@ -2,6 +2,7 @@ use serde::{ Deserialize, Serialize };
 use wasm_bindgen_futures::spawn_local;
 use web_sys::{ console, HtmlInputElement, Window };
 use yew::prelude::*;
+use regex::Regex;
 
 use crate::api::auth::login_user;
 
@@ -16,6 +17,12 @@ pub fn login_form_seven() -> Html {
     let error_handle = use_state(String::default);
     let error = (*error_handle).clone();
 
+    let email_valid_handle = use_state(|| true);
+    let email_valid = (*email_valid_handle).clone();
+
+    let password_valid_handle = use_state(|| true);
+    let password_valid = (*password_valid_handle).clone();
+
     let input_email_ref = use_node_ref();
     let input_email_handle = use_state(String::default);
     let input_email = (*input_email_handle).clone();
@@ -23,6 +30,13 @@ pub fn login_form_seven() -> Html {
     let input_password_ref = use_node_ref();
     let input_password_handle = use_state(String::default);
     let input_password = (*input_password_handle).clone();
+
+    let validate_email = |email: &str| {
+        let pattern = Regex::new(r"^[^ ]+@[^ ]+\.[a-z]{2,3}$").unwrap();
+        pattern.is_match(email)
+    };
+
+    let validate_password = |password: &str| !password.is_empty();
 
     let on_email_change = {
         let input_email_ref = input_email_ref.clone();
@@ -33,6 +47,7 @@ pub fn login_form_seven() -> Html {
             if let Some(input) = input {
                 let value = input.value();
                 input_email_handle.set(value);
+                email_valid_handle.set(validate_email(&input.value()));
             }
         })
     };
@@ -46,6 +61,7 @@ pub fn login_form_seven() -> Html {
             if let Some(input) = input {
                 let value = input.value();
                 input_password_handle.set(value);
+                password_valid_handle.set(validate_password(&input.value()));
             }
         })
     };
@@ -62,17 +78,22 @@ pub fn login_form_seven() -> Html {
             let email_val = email_ref.clone();
             let password_val = password_ref.clone();
             let error_handle = error_handle.clone();
-            let response = login_user(email_val, password_val).await;
-            match response {
-                Ok(_) => {
-                    console::log_1(&"success".into());
-                    let window: Window = web_sys::window().expect("window not available");
-                    let location = window.location();
-                    let _ = location.set_href("/error");
-                }
-                Err(err) => {
-                    error_handle.set(err);
-                }
+            if email_valid && password_valid {
+              let response = login_user(email_val, password_val).await;
+              match response {
+                  Ok(_) => {
+                      console::log_1(&"success".into());
+                      let window: Window = web_sys::window().expect("window not available");
+                      let location = window.location();
+                      let _ = location.set_href("/error");
+                  }
+                  Err(err) => {
+                      error_handle.set(err);
+                  }
+              }
+            }
+            else {
+              error_handle.set("Please provide a valid email and password!".into());
             }
         });
     });
@@ -93,7 +114,7 @@ pub fn login_form_seven() -> Html {
                   <label for="username" class="txt1">{"Username"}</label>
                 </div>
                 <div
-                  class="wrap-input validate-input"
+                  class="d-flex wrap-input validate-input"
                   data-validate="Username is required"
                 >
                   <i class="bi bi-person"></i>
@@ -102,6 +123,7 @@ pub fn login_form_seven() -> Html {
                     class="input"
                     type="text"
                     name="username"
+                    required={true}
                     placeholder="Email"
                     aria-required="true"
                     ref={input_email_ref}
@@ -109,19 +131,23 @@ pub fn login_form_seven() -> Html {
                   />
                   <span class="focus-input" aria-hidden="true"></span>
                 </div>
+                if !email_valid {
+                    <div class="error-txt">{"Enter a valid email address"}</div>
+                }
                 <div class="p-t-13 p-b-9">
-                  <label for="pass" class="txt1">{"Password"}</label>
+                  <label for="password" class="txt1">{"Password"}</label>
                 </div>
                 <div
-                  class="wrap-input validate-input"
+                  class="d-flex wrap-input validate-input"
                   data-validate="Password is required"
                 >
                   <i class="bi bi-lock"></i>
                   <input
-                    id="pass"
+                    id="password"
                     class="input"
                     type="password"
-                    name="pass"
+                    name="password"
+                    required={true}
                     aria-required="true"
                     placeholder="Password"
                     ref={input_password_ref}
@@ -129,6 +155,9 @@ pub fn login_form_seven() -> Html {
                   />
                   <span class="focus-input" aria-hidden="true"></span>
                 </div>
+                if !password_valid {
+                   <div class="error-txt">{"Password can't be blank"}</div>
+                }
                 <div class="container-login-form-btn m-t-17">
                   <button class="login-form-btn" type="submit">
                     <i class="bi bi-box-arrow-in-right me-2"></i>

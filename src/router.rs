@@ -15,21 +15,21 @@ use crate::pages::login_page_eight::LoginPageEight;
 pub enum Route {
     #[at("/error")]
     Error,
-    #[at("/bootstrap-css/1")]
+    #[at("/1")]
     LoginPageOne,
-    #[at("/bootstrap-css/2")]
+    #[at("/2")]
     LoginPageTwo,
-    #[at("/bootstrap-css/3")]
+    #[at("/3")]
     LoginPageThree,
-    #[at("/bootstrap-css/4")]
+    #[at("/4")]
     LoginPageFour,
-    #[at("/bootstrap-css/5")]
+    #[at("/5")]
     LoginPageFive,
-    #[at("/bootstrap-css/6")]
+    #[at("/6")]
     LoginPageSix,
-    #[at("/bootstrap-css/7")]
+    #[at("/7")]
     LoginPageSeven,
-    #[at("/bootstrap-css/8")]
+    #[at("/")]
     LoginPageEight,
 }
 

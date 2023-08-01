@@ -2,6 +2,7 @@ use serde::{ Deserialize, Serialize };
 use wasm_bindgen_futures::spawn_local;
 use web_sys::{ console, HtmlInputElement, Window };
 use yew::prelude::*;
+use regex::Regex;
 
 use crate::api::auth::login_user;
 
@@ -16,6 +17,12 @@ pub fn login_form_four() -> Html {
     let error_handle = use_state(String::default);
     let error = (*error_handle).clone();
 
+    let email_valid_handle = use_state(|| true);
+    let email_valid = (*email_valid_handle).clone();
+
+    let password_valid_handle = use_state(|| true);
+    let password_valid = (*password_valid_handle).clone();
+
     let input_email_ref = use_node_ref();
     let input_email_handle = use_state(String::default);
     let input_email = (*input_email_handle).clone();
@@ -23,6 +30,13 @@ pub fn login_form_four() -> Html {
     let input_password_ref = use_node_ref();
     let input_password_handle = use_state(String::default);
     let input_password = (*input_password_handle).clone();
+
+    let validate_email = |email: &str| {
+        let pattern = Regex::new(r"^[^ ]+@[^ ]+\.[a-z]{2,3}$").unwrap();
+        pattern.is_match(email)
+    };
+
+    let validate_password = |password: &str| !password.is_empty();
 
     let on_email_change = {
         let input_email_ref = input_email_ref.clone();
@@ -33,6 +47,7 @@ pub fn login_form_four() -> Html {
             if let Some(input) = input {
                 let value = input.value();
                 input_email_handle.set(value);
+                email_valid_handle.set(validate_email(&input.value()));
             }
         })
     };
@@ -46,6 +61,7 @@ pub fn login_form_four() -> Html {
             if let Some(input) = input {
                 let value = input.value();
                 input_password_handle.set(value);
+                password_valid_handle.set(validate_password(&input.value()));
             }
         })
     };
@@ -62,17 +78,22 @@ pub fn login_form_four() -> Html {
             let email_val = email_ref.clone();
             let password_val = password_ref.clone();
             let error_handle = error_handle.clone();
-            let response = login_user(email_val, password_val).await;
-            match response {
-                Ok(_) => {
-                    console::log_1(&"success".into());
-                    let window: Window = web_sys::window().expect("window not available");
-                    let location = window.location();
-                    let _ = location.set_href("/error");
-                }
-                Err(err) => {
-                    error_handle.set(err);
-                }
+            if email_valid && password_valid {
+              let response = login_user(email_val, password_val).await;
+              match response {
+                  Ok(_) => {
+                      console::log_1(&"success".into());
+                      let window: Window = web_sys::window().expect("window not available");
+                      let location = window.location();
+                      let _ = location.set_href("/error");
+                  }
+                  Err(err) => {
+                      error_handle.set(err);
+                  }
+              }
+            }
+            else {
+              error_handle.set("Please provide a valid email and password!".into());
             }
         });
     });
@@ -105,12 +126,16 @@ pub fn login_form_four() -> Html {
                         id="username"
                         placeholder="Email"
                         name="username"
+                        required={true}
                         ref={input_email_ref}
                         oninput={on_email_change}
                         aria-required="true"
                       />
                     </div>
                   </div>
+                  if !email_valid {
+                      <div class="error-txt">{"Enter a valid email address"}</div>
+                  }
                   <div class="mb-3">
                     <label for="password" class="form-label">{"Password"}</label>
                     <div class="input-group">
@@ -123,12 +148,16 @@ pub fn login_form_four() -> Html {
                         id="password"
                         name="password"
                         placeholder="Password"
+                        required={true}
                         aria-required="true"
                         ref={input_password_ref}
                         oninput={on_password_change}
                       />
                     </div>
                   </div>
+                  if !password_valid {
+                     <div class="error-txt">{"Password can't be blank"}</div>
+                  }
                   <div class="remember-me">
                     <input
                       type="checkbox"
