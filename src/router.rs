@@ -2,14 +2,14 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 use crate::pages::error::Error;
-use crate::pages::login_page_one::LoginPageOne;
-use crate::pages::login_page_two::LoginPageTwo;
-use crate::pages::login_page_three::LoginPageThree;
-use crate::pages::login_page_four::LoginPageFour;
-use crate::pages::login_page_five::LoginPageFive;
-use crate::pages::login_page_six::LoginPageSix;
-use crate::pages::login_page_seven::LoginPageSeven;
 use crate::pages::login_page_eight::LoginPageEight;
+use crate::pages::login_page_five::LoginPageFive;
+use crate::pages::login_page_four::LoginPageFour;
+use crate::pages::login_page_one::LoginPageOne;
+use crate::pages::login_page_seven::LoginPageSeven;
+use crate::pages::login_page_six::LoginPageSix;
+use crate::pages::login_page_three::LoginPageThree;
+use crate::pages::login_page_two::LoginPageTwo;
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
